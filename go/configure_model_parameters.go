@@ -26,7 +26,7 @@ func ConfigureModelParameters() (*genai.GenerateContentResponse, error) {
 
 	response, err := client.Models.GenerateContent(
 		ctx,
-		"gemini-3.5-flash",
+		"gemini-3.6-flash",
 		genai.Text("Tell me a story about a magic backpack."),
 		&genai.GenerateContentConfig{
 			CandidateCount:  candidateCount,
