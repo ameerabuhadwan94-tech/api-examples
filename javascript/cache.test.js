@@ -28,37 +28,37 @@ import {
 } from "./cache.js";
 
 describe("cache", () => {
-  test("cacheCreate", async () => {
+  test("cacheCreate", sync () => {
     const text = await cacheCreate();
     assert.ok(text && text.length > 0);
   });
 
-  test("cacheCreateFromName", async () => {
+  test("cacheCreateFromName", sync () => {
     const text = await cacheCreateFromName();
     assert.ok(text && text.length > 0);
   });
 
-  test("cacheCreateFromChat", async () => {
+  test("cacheCreateFromChat", sync () => {
     const text = await cacheCreateFromChat();
     assert.ok(text && text.length > 0);
   });
 
-  test("cacheDelete", async () => {
+  test("cacheDelete", sync () => {
     // cacheDelete does not return anything; ensure it runs without error.
     await cacheDelete();
   });
 
-  test("cacheGet", async () => {
+  test("cacheGet", sync () => {
     const cache = await cacheGet();
     assert.ok(cache && cache.name);
   });
 
-  test("cacheList", async () => {
+  test("cacheList", sync () => {
     // cacheList prints the list; ensure it runs without error.
     await cacheList();
   });
 
-  test("cacheUpdate", async () => {
+  test("cacheUpdate", sync () => {
     const cache = await cacheUpdate();
     assert.ok(cache && cache.name);
   });
